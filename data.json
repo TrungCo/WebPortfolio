@@ -1,0 +1,66 @@
+{
+  "categories": [
+    { "id": "react", "name": "React / Frontend" },
+    { "id": "node", "name": "Node / Backend" }
+  ],
+  "hero": {
+    "name": "Nguyen Thanh Trung",
+    "title": "Building <span class=\"text-gradient\">Digital Experiences</span> with Code",
+    "subtitle": "Full-stack developer specializing in crafting performant, scalable, and visually stunning web applications that bridge the gap between design and logic."
+  },
+  "about": {
+    "title": "Writing Code with <span class=\"text-gradient\">Logic and Empathy.</span>",
+    "paragraph1": "With over 6 years of experience in the dev ecosystem, I've had the privilege of architecting systems for global startups and visionary founders to translate complex business logic into efficient digital experiences.",
+    "paragraph2": "My approach is rooted in the \"Clean Code\" philosophy: removing technical debt until only the performant soul of the product remains. I believe that engineering shouldn't be opaque—it should be maintainable, scalable, and distinctly human-readable."
+  },
+  "contact": {
+    "email": "trungthanh22127@gmail.com",
+    "github": "github.com/curatordev"
+  },
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Lumina Health Engine",
+      "version": "v2.4.0",
+      "description": "High-performance analytics dashboard.",
+      "techDetails": "Built with Next.js, TypeScript & D3.js",
+      "command": "git checkout <span class=\"text-syntax-green\">main</span>",
+      "tag": "react",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWTW9smd1GN-_7qzYUDOVLbU0S7DQXQSY6fRUBIyU2ogADvB636BEHK1uFiDxb7Pl9Qn6HDVA5b0YFlzKgywZQneGbOVAUlezYOcnP5SSoZ9J_nzS2Kmp-gpa7AI_OO-CicRg-FMyfs-8fG9QE0PvL25ombJ5IoeyhFhr55oUI1sCFFXrlZQipnOAzZ0TqSHC3X8ydg8faNfCS-gpZWMBIsxw1FyOcco6Elc4QNcXS6nfpOA_Qioqhf8VUtXGDsjR3HsL5ynByt5c",
+      "githubLink": "https://github.com/curatordev/lumina-health"
+    },
+    {
+      "id": "project-2",
+      "title": "Ether Commerce",
+      "version": "STABLE",
+      "description": "Scalable e-commerce infrastructure.",
+      "techDetails": "Built with Remix, Shopify Hydrogen & Tailwind",
+      "command": "npm install <span class=\"text-syntax-purple\">@ether/core</span>",
+      "tag": "react",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuApoiu4tE3xJGraADsmmQ_4bFCxjycqPAb18AhDyhORdTOWN0PgKBUBunGOD13Wx5aIoRzCksN2ltl43FqnveDQFwgz1D-sRo7R5ApW4zV1xbdi7AE9TGRcxpAnJTVeM7dWOQiF_hfCcjcEjWauTU86uETy0Vf9n1DkRGSjR0cSJCVx1mv7A12Y8Liv9yXXohXUj9igcemjDCzz0_b8tLdaeQQTjHchww7q6wL6TPM9MczticxzwiFvmUjzU4dc_uvfczt3alLOwpo",
+      "githubLink": "https://github.com/curatordev/ether-commerce"
+    },
+    {
+      "id": "project-3",
+      "title": "Velo Realtime",
+      "version": "BETA",
+      "description": "Low-latency websocket analytics.",
+      "techDetails": "Built with Go, Redis & Socket.io",
+      "command": "docker-compose <span class=\"text-syntax-orange\">up -d</span>",
+      "tag": "node",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAvgxJythdsR34ykSdgMI4DFWW4GW6rT8EIrimAlPtfye4DbXxskHPO7X3z6vFHe06jwKQlqUbCTAq1JynBRCKoB00lidGSRWapBbbYqvTizRHVxquiwvkDIhZHaYMcPb3rcACtwUZgJbBj-Xajp4ae2n7O0WOsSpAdEUtY8uH9JBaxDClyxKKSrHxmhBsbcZsRMMmNAI_CFVPO_Nslh1EaKmqowrobvd8qXY6aRCw-_aoUARAq4utVoyPXN-kgtZHj9Y2NUsaMtYg",
+      "githubLink": "https://github.com/curatordev/velo-realtime"
+    },
+    {
+      "id": "project-4",
+      "title": "Zenith Platform",
+      "version": "ENTERPRISE",
+      "description": "Serverless cloud infrastructure.",
+      "techDetails": "Built with AWS Lambda, Terraform & Node.js",
+      "command": "terraform <span class=\"text-syntax-blue\">apply</span>",
+      "tag": "node",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCzFbfKwVtzLQBXorSWfGnBpewn0rqvANQ03GTXln8J536q9WutubC3ynFoziaoDarcokv0OYmnJijN_lN2K5Y8d-kcf4DyXAq7nb0f0XEa5RPnbKGv6FhCUpnKUjiZCtuZ-O633-c5kjW8t9X7a1ce7hMxtLwicdbWV07bAeURbImyFnVaQTXJhbfv_RFHX_qF7FlpAXaAnM9f80ZpZwk4qIS6ZuY_q85bfVSZZVKqDXVAD-dkEOdtDiTsmVRLjiGNEG7gxRyi6a8",
+      "githubLink": "https://github.com/curatordev/zenith-platform"
+    }
+  ]
+}

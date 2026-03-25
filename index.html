@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Curator | Developer Portfolio</title>
+  <!-- Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Plus Jakarta Sans -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Monospace Font for Tech Details -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error-container": "#6e0523",
+            "on-secondary-fixed-variant": "#1d608a",
+            "secondary": "#22648e",
+            "primary-fixed": "#fe97b9",
+            "tertiary-container": "#cbfecc",
+            "on-surface": "#2d3335",
+            "tertiary-dim": "#315c37",
+            "surface-bright": "#f8f9fa",
+            "secondary-dim": "#0e5881",
+            "on-primary-container": "#621837",
+            "surface-tint": "#974362",
+            "on-primary": "#fff7f7",
+            "on-secondary-container": "#0a5780",
+            "secondary-container": "#cbe6ff",
+            "inverse-surface": "#0c0f10",
+            "surface-container": "#ebeef0",
+            "on-primary-fixed-variant": "#6d2140",
+            "error-container": "#f97386",
+            "secondary-fixed-dim": "#aed9ff",
+            "on-secondary": "#f6f9ff",
+            "error": "#a8364b",
+            "on-tertiary": "#e9ffe6",
+            "primary": "#974362",
+            "background": "#f8f9fa",
+            "surface-variant": "#dee3e6",
+            "on-secondary-fixed": "#004366",
+            "on-surface-variant": "#5a6062",
+            "inverse-primary": "#fe97b9",
+            "surface-container-low": "#f1f4f5",
+            "primary-fixed-dim": "#ee8aac",
+            "surface": "#f8f9fa",
+            "on-tertiary-fixed": "#25512d",
+            "tertiary-fixed": "#cbfecc",
+            "secondary-fixed": "#cbe6ff",
+            "surface-container-highest": "#dee3e6",
+            "primary-container": "#fe97b9",
+            "outline-variant": "#adb3b5",
+            "surface-container-high": "#e5e9eb",
+            "on-error": "#fff7f7",
+            "surface-dim": "#d5dbdd",
+            "on-primary-fixed": "#420020",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#9b9d9e",
+            "on-background": "#2d3335",
+            "tertiary": "#3c6942",
+            "on-tertiary-fixed-variant": "#426e47",
+            "outline": "#767c7e",
+            "on-tertiary-container": "#38643e",
+            "error-dim": "#6b0221",
+            "primary-dim": "#883756",
+            "tertiary-fixed-dim": "#bdefbe",
+            // Syntax Highlighting Colors
+            "syntax-blue": "#4a9eff",
+            "syntax-purple": "#a277ff",
+            "syntax-green": "#50fa7b",
+            "syntax-orange": "#ffb86c"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"],
+            "mono": ["JetBrains Mono", "monospace"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .ambient-shadow {
+      box-shadow: 0px 10px 40px rgba(45, 51, 53, 0.06);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #974362 0%, #fe97b9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .syntax-tag {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface antialiased">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0px_10px_40px_rgba(45,51,53,0.06)] px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+        <img alt="Profile" class="w-full h-full object-cover"
+          data-alt="Close-up portrait of a young professional developer with a friendly smile, natural lighting, soft studio background"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy3o54C1n0YWsKWWOZ9B4RyM1YQckse8leNiH1vKxOJpC2UNhghJF-1Ga4_Fgjp7Mr_-6yS2RRfKgpPtVYjJEoRouCHl0osT5xVdfguvGF2P8mAmdIKFSx08WrSwDrbttGvz5WbJrl-mwfLj3lFHYe5s8GhJALvTLtk_rCs3DOf4EC_neKIDOkSouTzm2dHTEMv4t9HpSp2zQ9TQRqGiDtCw1o7J5468O7e-TOk9MVOW0xjyzO0vCbkcMVrH_xq93lnN4CpcDilWU" />
+      </div>
+      <span class="text-xl font-bold text-[#2d3335] font-headline tracking-tight">Curator<span
+          class="text-primary">.dev</span></span>
+    </div>
+    <nav class="hidden md:flex items-center gap-8" id="desktopNav">
+      <a class="nav-link text-[#974362] font-semibold font-label text-[0.75rem] uppercase tracking-widest hover:opacity-80 transition-opacity"
+        href="#home">Home</a>
+      <a class="nav-link text-[#2d3335] font-label text-[0.75rem] uppercase tracking-widest hover:opacity-80 transition-opacity"
+        href="#work">Projects</a>
+      <a class="nav-link text-[#2d3335] font-label text-[0.75rem] uppercase tracking-widest hover:opacity-80 transition-opacity"
+        href="#about">About</a>
+      <a class="nav-link text-[#2d3335] font-label text-[0.75rem] uppercase tracking-widest hover:opacity-80 transition-opacity"
+        href="#contact">Contact</a>
+    </nav>
+    <button id="mobileMenuBtn" class="md:hidden text-[#974362] active:scale-90 transition-transform z-50">
+      <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+    <div class="hidden md:block">
+      <button id="viewConsoleBtn"
+        class="bg-gradient-to-br from-[#974362] to-[#fe97b9] text-white px-6 py-2.5 rounded-full font-label text-[0.75rem] uppercase tracking-widest font-semibold hover:scale-105 transition-all ambient-shadow">
+        View Console
+      </button>
+    </div>
+  </header>
+  <!-- Mobile Fullscreen Menu -->
+  <div id="mobileMenu"
+    class="fixed inset-0 bg-surface/95 backdrop-blur-md z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+    <a class="mobile-nav-link text-3xl font-headline font-bold text-[#974362]" href="#home">Home</a>
+    <a class="mobile-nav-link text-3xl font-headline font-bold text-on-surface" href="#work">Projects</a>
+    <a class="mobile-nav-link text-3xl font-headline font-bold text-on-surface" href="#about">About</a>
+    <a class="mobile-nav-link text-3xl font-headline font-bold text-on-surface" href="#contact">Contact</a>
+  </div>
+  <main>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-24 pb-12 px-6 lg:px-24 bg-surface" id="home">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1 relative">
+          <div class="relative z-10 rounded-xl overflow-hidden aspect-[4/5] ambient-shadow">
+            <img alt="Developer Studio" class="w-full h-full object-cover"
+              data-alt="Modern bright workstation with multiple monitors showing code, minimalist desk setup in soft morning light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPjTMyukVK46s8iaTrOB0C-RhNgFVRncsw4lUMLFKvc6c9RWL0ci8BjBEcJ94gwi3urU2NiUAdrEz6rcAFMC50lbGQv91imE0yFt0edDBmnpkxHSwKCNDG4cHh22QeYEHlpSwW3uFw3GTDgKywd1N_CiTYL9pUjpwAHUp3qS-N6EWD7dPbib31w1TGkk8eC8-o4sgHt0S1-EBqXppH7-60k5gis_yRzVr5YGhRH5ZsuQe-97YZpFbVRYVgHaVLNN34ncNb_x5oCiY" />
+          </div>
+          <!-- Decorative Terminal Card -->
+          <div id="terminalCard"
+            class="absolute -bottom-6 -left-6 z-20 hidden md:block opacity-0 translate-y-4 transition-all duration-500">
+            <div class="glass-card p-4 rounded-xl border border-white/50 ambient-shadow w-64">
+              <div class="flex gap-1.5 mb-3">
+                <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+              </div>
+              <div class="font-mono text-[10px] space-y-1">
+                <p class="text-syntax-purple">const <span class="text-syntax-blue">dev</span> = {</p>
+                <p class="pl-3 text-on-surface-variant">status: <span class="text-syntax-green">'coding'</span>,</p>
+                <p class="pl-3 text-on-surface-variant">coffee: <span class="text-syntax-orange">true</span></p>
+                <p class="text-syntax-purple">};</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -top-12 -left-12 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+          <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl -z-10">
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 space-y-8">
+          <div class="space-y-4">
+            <span
+              class="inline-block px-4 py-1.5 mb-2 rounded-full bg-tertiary-container text-on-tertiary-container font-mono text-[0.7rem] uppercase tracking-widest font-bold">
+              &lt;ready_for_shipment /&gt;
+            </span>
+            <div class="scroll-animate opacity-0 translate-y-8 transition-all duration-700 delay-100">
+              <p class="text-lg lg:text-xl font-mono text-[#974362] tracking-widest uppercase mb-2">Hello, I'm</p>
+              <h1 id="heroName"
+                class="text-6xl lg:text-8xl font-headline font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#974362] to-[#fe97b9] leading-[1.1] tracking-tighter pb-2">
+                Nguyễn Thành Trung
+              </h1>
+            </div>
+            <h2 id="heroTitle"
+              class="scroll-animate opacity-0 translate-y-8 transition-all duration-700 delay-200 text-3xl lg:text-5xl font-headline font-bold text-on-surface leading-[1.2] tracking-tight mt-4">
+              Building <span class="text-gradient">Digital Experiences</span> with Code
+            </h2>
+            <p id="heroSubtitle" class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+              Full-stack developer specializing in crafting performant, scalable, and visually stunning web applications
+              that bridge the gap between design and logic.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a class="bg-gradient-to-br from-[#974362] to-[#fe97b9] text-white px-10 py-4 rounded-full font-label text-[0.875rem] uppercase tracking-widest font-bold hover:scale-105 transition-all ambient-shadow"
+              href="#work">
+              View Projects
+            </a>
+            <a class="bg-surface-container-high text-on-surface px-10 py-4 rounded-full font-label text-[0.875rem] uppercase tracking-widest font-bold hover:bg-surface-variant transition-all"
+              href="#about">
+              Read Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Curated Works Section -->
+    <section class="py-24 px-6 lg:px-24 bg-surface-container-low" id="work">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="space-y-4">
+            <h2
+              class="scroll-animate opacity-0 translate-y-8 transition-all duration-700 text-4xl lg:text-5xl font-headline font-bold text-on-surface tracking-tight">
+              Technical Portfolio</h2>
+            <p class="text-on-surface-variant text-lg max-w-lg">A deep dive into the architectures, frameworks, and
+              logic behind my recent builds.</p>
+          </div>
+          <div class="flex gap-4">
+            <span
+              class="filter-tab active text-on-surface font-label text-[0.75rem] uppercase tracking-widest font-bold border-b-2 border-primary pb-1 cursor-pointer transition-colors"
+              data-filter="all">All Tech</span>
+            <span
+              class="filter-tab text-on-surface-variant font-label text-[0.75rem] uppercase tracking-widest font-bold hover:text-on-surface cursor-pointer border-b-2 border-transparent pb-1 transition-colors"
+              data-filter="react">React</span>
+            <span
+              class="filter-tab text-on-surface-variant font-label text-[0.75rem] uppercase tracking-widest font-bold hover:text-on-surface cursor-pointer border-b-2 border-transparent pb-1 transition-colors"
+              data-filter="node">Node.js</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+          <!-- Project Card 1 -->
+          <div class="project-card group cursor-pointer transition-all duration-500" data-tech="react"
+            onclick="window.open('https://github.com/curatordev/lumina-health', '_blank')">
+            <div
+              class="relative rounded-xl overflow-hidden bg-surface-container aspect-video mb-6 ambient-shadow transition-transform duration-500 group-hover:scale-[1.02]">
+              <img alt="Lumina App"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="Minimalist health app dashboard showing complex data visualizations and real-time updates"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWTW9smd1GN-_7qzYUDOVLbU0S7DQXQSY6fRUBIyU2ogADvB636BEHK1uFiDxb7Pl9Qn6HDVA5b0YFlzKgywZQneGbOVAUlezYOcnP5SSoZ9J_nzS2Kmp-gpa7AI_OO-CicRg-FMyfs-8fG9QE0PvL25ombJ5IoeyhFhr55oUI1sCFFXrlZQipnOAzZ0TqSHC3X8ydg8faNfCS-gpZWMBIsxw1FyOcco6Elc4QNcXS6nfpOA_Qioqhf8VUtXGDsjR3HsL5ynByt5c" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                <span class="text-white font-mono text-sm tracking-tight">git checkout <span
+                    class="text-syntax-green">main</span></span>
+              </div>
+            </div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-2xl font-headline font-bold">Lumina Health Engine</h3>
+              <span
+                class="font-mono text-[0.65rem] px-2 py-1 rounded bg-secondary-container text-secondary font-bold">v2.4.0</span>
+            </div>
+            <p class="text-on-surface-variant mb-4">High-performance analytics dashboard. <span
+                class="text-syntax-blue font-mono text-sm font-semibold">Built with Next.js, TypeScript &amp;
+                D3.js</span></p>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="project-card group cursor-pointer translate-y-0 lg:translate-y-12 transition-all duration-500"
+            data-tech="react" onclick="window.open('https://github.com/curatordev/ether-commerce', '_blank')">
+            <div
+              class="relative rounded-xl overflow-hidden bg-surface-container aspect-video mb-6 ambient-shadow transition-transform duration-500 group-hover:scale-[1.02]">
+              <img alt="Ether Brand"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="E-commerce site with smooth transitions and high-resolution product catalog"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuApoiu4tE3xJGraADsmmQ_4bFCxjycqPAb18AhDyhORdTOWN0PgKBUBunGOD13Wx5aIoRzCksN2ltl43FqnveDQFwgz1D-sRo7R5ApW4zV1xbdi7AE9TGRcxpAnJTVeM7dWOQiF_hfCcjcEjWauTU86uETy0Vf9n1DkRGSjR0cSJCVx1mv7A12Y8Liv9yXXohXUj9igcemjDCzz0_b8tLdaeQQTjHchww7q6wL6TPM9MczticxzwiFvmUjzU4dc_uvfczt3alLOwpo" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                <span class="text-white font-mono text-sm tracking-tight">npm install <span
+                    class="text-syntax-purple">@ether/core</span></span>
+              </div>
+            </div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-2xl font-headline font-bold">Ether Commerce</h3>
+              <span
+                class="font-mono text-[0.65rem] px-2 py-1 rounded bg-secondary-container text-secondary font-bold">STABLE</span>
+            </div>
+            <p class="text-on-surface-variant mb-4">Scalable e-commerce infrastructure. <span
+                class="text-syntax-blue font-mono text-sm font-semibold">Built with Remix, Shopify Hydrogen &amp;
+                Tailwind</span></p>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="project-card group cursor-pointer transition-all duration-500" data-tech="node"
+            onclick="window.open('https://github.com/curatordev/velo-realtime', '_blank')">
+            <div
+              class="relative rounded-xl overflow-hidden bg-surface-container aspect-video mb-6 ambient-shadow transition-transform duration-500 group-hover:scale-[1.02]">
+              <img alt="Velo Analytics"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="Real-time data stream interface with complex graph representations"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvgxJythdsR34ykSdgMI4DFWW4GW6rT8EIrimAlPtfye4DbXxskHPO7X3z6vFHe06jwKQlqUbCTAq1JynBRCKoB00lidGSRWapBbbYqvTizRHVxquiwvkDIhZHaYMcPb3rcACtwUZgJbBj-Xajp4ae2n7O0WOsSpAdEUtY8uH9JBaxDClyxKKSrHxmhBsbcZsRMMmNAI_CFVPO_Nslh1EaKmqowrobvd8qXY6aRCw-_aoUARAq4utVoyPXN-kgtZHj9Y2NUsaMtYg" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                <span class="text-white font-mono text-sm tracking-tight">docker-compose <span
+                    class="text-syntax-orange">up -d</span></span>
+              </div>
+            </div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-2xl font-headline font-bold">Velo Realtime</h3>
+              <span
+                class="font-mono text-[0.65rem] px-2 py-1 rounded bg-secondary-container text-secondary font-bold">BETA</span>
+            </div>
+            <p class="text-on-surface-variant mb-4">Low-latency websocket analytics. <span
+                class="text-syntax-blue font-mono text-sm font-semibold">Built with Go, Redis &amp; Socket.io</span></p>
+          </div>
+          <!-- Project Card 4 -->
+          <div class="project-card group cursor-pointer translate-y-0 lg:translate-y-12 transition-all duration-500"
+            data-tech="node" onclick="window.open('https://github.com/curatordev/zenith-platform', '_blank')">
+            <div
+              class="relative rounded-xl overflow-hidden bg-surface-container aspect-video mb-6 ambient-shadow transition-transform duration-500 group-hover:scale-[1.02]">
+              <img alt="Zenith Rebrand"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="3D abstract rendering of a cloud computing network infrastructure"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzFbfKwVtzLQBXorSWfGnBpewn0rqvANQ03GTXln8J536q9WutubC3ynFoziaoDarcokv0OYmnJijN_lN2K5Y8d-kcf4DyXAq7nb0f0XEa5RPnbKGv6FhCUpnKUjiZCtuZ-O633-c5kjW8t9X7a1ce7hMxtLwicdbWV07bAeURbImyFnVaQTXJhbfv_RFHX_qF7FlpAXaAnM9f80ZpZwk4qIS6ZuY_q85bfVSZZVKqDXVAD-dkEOdtDiTsmVRLjiGNEG7gxRyi6a8" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                <span class="text-white font-mono text-sm tracking-tight">terraform <span
+                    class="text-syntax-blue">apply</span></span>
+              </div>
+            </div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-2xl font-headline font-bold">Zenith Platform</h3>
+              <span
+                class="font-mono text-[0.65rem] px-2 py-1 rounded bg-secondary-container text-secondary font-bold">ENTERPRISE</span>
+            </div>
+            <p class="text-on-surface-variant mb-4">Serverless cloud infrastructure. <span
+                class="text-syntax-blue font-mono text-sm font-semibold">Built with AWS Lambda, Terraform &amp;
+                Node.js</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-24 px-6 lg:px-24 bg-surface overflow-hidden relative" id="about">
+      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+        <div class="w-full lg:w-1/2 space-y-8 relative z-10">
+          <span class="text-primary font-mono text-[0.75rem] uppercase tracking-widest font-bold">&lt;who_am_i
+            /&gt;</span>
+          <h2
+            class="scroll-animate opacity-0 translate-y-8 transition-all duration-700 text-4xl lg:text-5xl font-headline font-bold text-on-surface tracking-tight">
+            Writing Code with <span class="text-gradient">Logic and Empathy.</span></h2>
+          <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+            <p>With over 6 years of experience in the dev ecosystem, I've had the privilege of architecting systems for
+              global startups and visionary founders to translate complex business logic into efficient digital
+              experiences.</p>
+            <p>My approach is rooted in the "Clean Code" philosophy: removing technical debt until only the performant
+              soul of the product remains. I believe that engineering shouldn't be opaque—it should be maintainable,
+              scalable, and distinctly human-readable.</p>
+          </div>
+          <div class="pt-6">
+            <div class="flex items-center gap-12">
+              <div>
+                <p class="text-3xl font-mono font-extrabold text-[#974362]">12.4k+</p>
+                <p class="text-sm font-label uppercase tracking-wider text-on-surface-variant">Github Commits</p>
+              </div>
+              <div>
+                <p class="text-3xl font-mono font-extrabold text-[#974362]">8</p>
+                <p class="text-sm font-label uppercase tracking-wider text-on-surface-variant">NPM Packages</p>
+              </div>
+              <div>
+                <p class="text-3xl font-mono font-extrabold text-[#974362]">99.9%</p>
+                <p class="text-sm font-label uppercase tracking-wider text-on-surface-variant">Uptime Focus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 relative">
+          <div class="glass-card p-4 rounded-xl ambient-shadow relative z-10">
+            <img alt="Collaboration" class="rounded-lg w-full object-cover"
+              data-alt="Top down shot of a developer's workspace with a mechanical keyboard, code on screen, and a notebook for architecture diagrams"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn37NPkmfr_qTzhV4UdlcSBQ8M00qf6OhPNMZuOzFZhS1_-iqpN1AgE_gpzFYmQY-kt8Vi8AUyoZg6mLQT52m6RUrUCm357oMoVs97FM3gLoytrjxp2Zhz4L2DmGXrsx-NmC1X2zPYWILZj295t9RrRDKGmYX97Gm_OdWwQeEfIZ1QWgobLC9ueTG0njfiWRDWhIAreEbDiNbtS6_MAOftF4J9AWrbeI8i7vzDVTCmKxnhHyf5Lj3sMIIjCcrvS1af2EzNU2yID00" />
+          </div>
+          <!-- Decorative Elements -->
+          <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Toolbox (Skills) Section -->
+    <section class="py-24 px-6 lg:px-24 bg-surface-container-low relative overflow-hidden">
+      <div class="max-w-7xl mx-auto text-center mb-16">
+        <span
+          class="text-on-surface-variant font-mono text-[0.75rem] uppercase tracking-widest font-bold">system.log(stack)</span>
+        <h2
+          class="scroll-animate opacity-0 translate-y-8 transition-all duration-700 text-4xl font-headline font-bold text-on-surface mt-4">
+          Technical Toolbox</h2>
+      </div>
+      <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+          </div>
+          <span class="font-bold">React / Next.js</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="dns">dns</span>
+          </div>
+          <span class="font-bold">Node.js / Go</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="database">database</span>
+          </div>
+          <span class="font-bold">PostgreSQL</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="cloud">cloud</span>
+          </div>
+          <span class="font-bold">AWS / DevOps</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+          </div>
+          <span class="font-bold">Git / CI-CD</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="security">security</span>
+          </div>
+          <span class="font-bold">Auth / Security</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="api">api</span>
+          </div>
+          <span class="font-bold">GraphQL / REST</span>
+        </div>
+        <div
+          class="bg-surface-container-lowest p-8 rounded-xl flex flex-col items-center justify-center space-y-4 hover:scale-105 transition-all ambient-shadow group">
+          <div
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined" data-icon="speed">speed</span>
+          </div>
+          <span class="font-bold">Performance</span>
+        </div>
+      </div>
+      <!-- Decorative Code Snippet Card in Background -->
+      <div class="absolute top-20 -right-20 opacity-20 rotate-12 pointer-events-none hidden lg:block">
+        <div class="glass-card p-6 rounded-2xl w-[400px] border border-primary/20">
+          <div class="font-mono text-xs space-y-2">
+            <p class="text-syntax-purple">function <span class="text-syntax-blue">optimizeEngine</span>(data) {</p>
+            <p class="pl-4 text-on-surface-variant">return data.<span class="text-syntax-orange">filter</span>(item
+              =&gt; item.active)</p>
+            <p class="pl-8 text-on-surface-variant">.<span class="text-syntax-orange">map</span>(item =&gt; ({ ...item,
+              timestamp: Date.<span class="text-syntax-blue">now</span>() }));</p>
+            <p class="text-syntax-purple">}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-24 px-6 lg:px-24 bg-surface" id="contact">
+      <div class="max-w-7xl mx-auto glass-card p-12 lg:p-20 rounded-xl ambient-shadow flex flex-col lg:flex-row gap-20">
+        <div class="lg:w-1/2 space-y-8">
+          <h2
+            class="scroll-animate opacity-0 translate-y-8 transition-all duration-700 text-5xl font-headline font-bold text-on-surface">
+            Let's build something <span class="text-gradient">performant.</span></h2>
+          <p class="text-on-surface-variant text-xl">I'm currently open for senior roles or architectural consulting.
+            Let's discuss how we can scale your engineering culture.</p>
+          <div class="space-y-4 pt-4">
+            <div class="flex items-center gap-4 text-on-surface">
+              <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+              <span class="text-lg font-mono">dev@curator.io</span>
+            </div>
+            <div class="flex items-center gap-4 text-on-surface">
+              <span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+              <span class="text-lg font-mono">github.com/curatordev</span>
+            </div>
+          </div>
+          <div class="flex gap-4 pt-4">
+            <a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined" data-icon="code">code</span>
+            </a>
+            <a class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined" data-icon="link">link</span>
+            </a>
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          <form id="contactForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant font-bold ml-2">const
+                  name</label>
+                <input id="name" required
+                  class="w-full bg-surface-container-lowest border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all font-mono placeholder:text-outline-variant"
+                  placeholder="'Your Name'" type="text" />
+              </div>
+              <div class="space-y-2">
+                <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant font-bold ml-2">const
+                  email</label>
+                <input id="email" required
+                  class="w-full bg-surface-container-lowest border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all font-mono placeholder:text-outline-variant"
+                  placeholder="'email@address.com'" type="email" />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs font-mono uppercase tracking-widest text-on-surface-variant font-bold ml-2">switch
+                (purpose)</label>
+              <select id="purpose"
+                class="w-full bg-surface-container-lowest border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface-variant font-mono">
+                <option value="New Project Architecture">New Project Architecture</option>
+                <option value="Team Augmentation">Team Augmentation</option>
+                <option value="Speaking / Tech Talk">Speaking / Tech Talk</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label
+                class="text-xs font-mono uppercase tracking-widest text-on-surface-variant font-bold ml-2">message.push()</label>
+              <textarea id="message" required
+                class="w-full bg-surface-container-lowest border-0 rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all font-mono placeholder:text-outline-variant"
+                placeholder="'Describe the challenge...'" rows="5"></textarea>
+            </div>
+            <button id="submitBtn"
+              class="w-full bg-gradient-to-br from-[#974362] to-[#fe97b9] text-white py-5 rounded-full font-label text-[1rem] uppercase tracking-widest font-bold hover:scale-[1.02] transition-all ambient-shadow"
+              type="submit">
+              Execute Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="py-12 px-6 lg:px-24 bg-surface-container-low text-center">
+    <div class="max-w-7xl mx-auto space-y-8">
+      <h3 class="text-2xl font-bold font-headline tracking-tight">Curator<span class="text-primary">.dev</span></h3>
+      <div class="flex justify-center gap-8">
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-mono text-xs uppercase tracking-widest"
+          href="#home">/home</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-mono text-xs uppercase tracking-widest"
+          href="#work">/projects</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-mono text-xs uppercase tracking-widest"
+          href="#about">/docs</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-mono text-xs uppercase tracking-widest"
+          href="#contact">/ping</a>
+      </div>
+      <p class="text-on-surface-variant text-xs font-mono">© 2024 Curator Portfolio. &lt;built_with_love /&gt;</p>
+    </div>
+  </footer>
+  <!-- Mobile Navigation Menu -->
+  <nav class="md:hidden fixed bottom-6 left-0 right-0 z-50 flex justify-around items-center px-4">
+    <div
+      class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl w-[90%] mx-auto rounded-full shadow-[0px_10px_40px_rgba(45,51,53,0.06)] flex justify-around items-center py-2 px-2">
+      <a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#974362] to-[#fe97b9] text-white rounded-full p-3 scale-105 transition-all duration-300"
+        href="#home">
+        <span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-[#2d3335] p-3 hover:bg-slate-100/50 rounded-full transition-all"
+        href="#work">
+        <span class="material-symbols-outlined" data-icon="data_object">data_object</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-[#2d3335] p-3 hover:bg-slate-100/50 rounded-full transition-all"
+        href="#about">
+        <span class="material-symbols-outlined" data-icon="description">description</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-[#2d3335] p-3 hover:bg-slate-100/50 rounded-full transition-all"
+        href="#contact">
+        <span class="material-symbols-outlined" data-icon="mail">mail</span>
+      </a>
+    </div>
+  </nav>
+  <script>
+    // 1. ScrollSpy Navigation
+    const sections = document.querySelectorAll('section[id]');
+    const navLinksDesktop = document.querySelectorAll('.nav-link');
+    const navLinksMobile = document.querySelectorAll('.mobile-nav-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          // Update Desktop Nav
+          navLinksDesktop.forEach(link => {
+            link.classList.remove('text-[#974362]', 'font-semibold');
+            link.classList.add('text-[#2d3335]');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.remove('text-[#2d3335]');
+              link.classList.add('text-[#974362]', 'font-semibold');
+            }
+          });
+          // Update Mobile Nav
+          navLinksMobile.forEach(link => {
+            link.classList.remove('text-[#974362]');
+            link.classList.add('text-on-surface');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.remove('text-on-surface');
+              link.classList.add('text-[#974362]');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined" data-icon="close">close</span>';
+      } else {
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined" data-icon="menu">menu</span>';
+      }
+    });
+
+    navLinksMobile.forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined" data-icon="menu">menu</span>';
+      });
+    });
+
+    // 4. View Console Interactive Button
+    const viewConsoleBtn = document.getElementById('viewConsoleBtn');
+    const terminalCard = document.getElementById('terminalCard');
+    let terminalVisible = false;
+
+    if (viewConsoleBtn && terminalCard) {
+      viewConsoleBtn.addEventListener('click', () => {
+        terminalVisible = !terminalVisible;
+        if (terminalVisible) {
+          terminalCard.classList.remove('opacity-0', 'translate-y-4');
+          terminalCard.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          terminalCard.classList.remove('opacity-100', 'translate-y-0');
+          terminalCard.classList.add('opacity-0', 'translate-y-4');
+        }
+      });
+
+      // Automatically load terminal card after a slight delay
+      setTimeout(() => {
+        if (window.innerWidth >= 768) {
+          terminalVisible = true;
+          terminalCard.classList.remove('opacity-0', 'translate-y-4');
+          terminalCard.classList.add('opacity-100', 'translate-y-0');
+        }
+      }, 1000);
+    }
+
+    // 5. Scroll Animations
+    const scrollObserverOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-8');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, scrollObserverOptions);
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      scrollObserver.observe(el);
+    });
+  </script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const originalText = btn.innerText;
+      btn.innerText = 'Executing...';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            purpose: document.getElementById('purpose').value,
+            message: document.getElementById('message').value
+          })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          btn.innerText = 'Message Executed Successfully!';
+          btn.classList.replace('from-[#974362]', 'from-green-600');
+          btn.classList.replace('to-[#fe97b9]', 'to-green-400');
+          document.getElementById('contactForm').reset();
+          setTimeout(() => {
+            btn.innerText = originalText;
+            btn.classList.replace('from-green-600', 'from-[#974362]');
+            btn.classList.replace('to-green-400', 'to-[#fe97b9]');
+            btn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        console.error(err);
+        btn.innerText = 'Runtime Error! Check Console.';
+        btn.classList.replace('from-[#974362]', 'from-red-600');
+        btn.classList.replace('to-[#fe97b9]', 'to-red-400');
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.replace('from-red-600', 'from-[#974362]');
+          btn.classList.replace('to-red-400', 'to-[#fe97b9]');
+          btn.disabled = false;
+        }, 3000);
+      }
+    });
+  </script>
+  <script>
+    // --- Dynamic CMS Data Loader ---
+    fetch('/data.json')
+      .then(res => res.json())
+      .then(data => {
+        // 1. Hero
+        const heroName = document.querySelector('#heroName');
+        if (heroName && data.hero.name) heroName.innerHTML = data.hero.name;
+
+        const heroTitle = document.querySelector('#heroTitle');
+        if (heroTitle && data.hero.title) heroTitle.innerHTML = data.hero.title;
+
+        const heroSubtitle = document.querySelector('#heroSubtitle');
+        if (heroSubtitle && data.hero.subtitle) heroSubtitle.innerHTML = data.hero.subtitle;
+
+        // 2. About
+        const aboutTitle = document.querySelector('#about h2');
+        if (aboutTitle) aboutTitle.innerHTML = data.about.title;
+
+        const aboutParagraphs = document.querySelectorAll('#about p');
+        if (aboutParagraphs.length >= 2) {
+          aboutParagraphs[0].innerHTML = data.about.paragraph1;
+          aboutParagraphs[1].innerHTML = data.about.paragraph2;
+        }
+
+        // 3. Contact
+        const contactSpans = document.querySelectorAll('#contact span.font-mono');
+        if (contactSpans.length >= 2) {
+          contactSpans[0].innerText = data.contact.email;
+          contactSpans[1].innerText = data.contact.github;
+        }
+
+        // 4. Categories & Projects Grid
+        const filterNav = document.querySelector('#work nav');
+        if (filterNav && data.categories) {
+          filterNav.innerHTML = `<button class="filter-tab active text-on-surface border-b-2 border-primary pb-2 font-mono text-xs uppercase tracking-widest font-bold whitespace-nowrap snap-start" data-filter="all">All</button>`;
+          data.categories.forEach(cat => {
+            filterNav.innerHTML += `<button class="filter-tab text-on-surface-variant border-b-2 border-transparent hover:text-on-surface transition-colors pb-2 font-mono text-xs uppercase tracking-widest font-bold whitespace-nowrap snap-start" data-filter="${cat.id}">${cat.name}</button>`;
+          });
+        }
+
+        const projectGrid = document.querySelector('#work .grid');
+        if (projectGrid && data.projects && data.projects.length > 0) {
+          projectGrid.innerHTML = ''; // Clear default hardcoded projects
+          data.projects.forEach((proj, index) => {
+            const translateClass = (index % 2 !== 0) ? 'translate-y-0 lg:translate-y-12' : '';
+            const html = `
+              <!-- Dynamic Project Card -->
+              <div class="project-card group cursor-pointer transition-all duration-500 ${translateClass}" data-tech="${proj.tag}" onclick="window.open('${proj.githubLink}', '_blank')">
+                <div class="relative rounded-xl overflow-hidden bg-surface-container aspect-video mb-6 ambient-shadow transition-transform duration-500 group-hover:scale-[1.02]">
+                  <img alt="${proj.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="${proj.image}" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                    <span class="text-white font-mono text-sm tracking-tight">${proj.command}</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-2xl font-headline font-bold">${proj.title}</h3>
+                  <span class="font-mono text-[0.65rem] px-2 py-1 rounded bg-secondary-container text-secondary font-bold">${proj.version}</span>
+                </div>
+                <p class="text-on-surface-variant mb-4">${proj.description} <span class="text-syntax-blue font-mono text-sm font-semibold">${proj.techDetails}</span></p>
+              </div>
+            `;
+            projectGrid.innerHTML += html;
+          });
+
+          // Initialize Dynamic Project Filtering
+          const filterTabs = document.querySelectorAll('.filter-tab');
+          filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              filterTabs.forEach(t => {
+                t.classList.remove('text-on-surface', 'border-primary', 'active');
+                t.classList.add('text-on-surface-variant', 'border-transparent');
+              });
+              tab.classList.remove('text-on-surface-variant', 'border-transparent');
+              tab.classList.add('text-on-surface', 'border-primary', 'active');
+
+              const filterValue = tab.getAttribute('data-filter');
+              const dynamicCards = document.querySelectorAll('.project-card');
+
+              dynamicCards.forEach(card => {
+                if (filterValue === 'all' || (card.getAttribute('data-tech') || '').includes(filterValue)) {
+                  card.style.display = 'block';
+                  setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = card.classList.contains('lg:translate-y-12') && window.innerWidth >= 1024
+                      ? 'translateY(3rem)'
+                      : 'translateY(0)';
+                  }, 50);
+                } else {
+                  card.style.opacity = '0';
+                  card.style.transform = 'translateY(1rem)';
+                  setTimeout(() => {
+                    card.style.display = 'none';
+                  }, 300);
+                }
+              });
+            });
+          });
+        }
+      })
+      .catch(err => console.error("Could not fetch CMS content, using default static content.", err));
+  </script>
+</body>
+
+</html>
